@@ -1,0 +1,182 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f2f33;
+}
+
+.Box
+{
+    position: relative;
+    width: 7.5cm;
+    height: 9cm;
+    background: #011f01;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4),
+    inset 5px 5px 10px rgba(170, 170, 170, 0.25),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Clock
+{
+    position: relative;
+    bottom: 9px;
+    width: 7.5cm;
+    height: 7.5cm;
+    background: #044104;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 10px rgba(170, 170, 170, 0.25), 
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Clock::before
+{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #555555;
+    border: 3px solid #9e9c9c;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.Clock::after
+{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.Clock span
+{
+    position: absolute;
+    text-align: center;
+    inset: 15px;
+    transform: rotate(calc(30deg * var(--a)));
+}
+
+.Clock span b
+{
+    position: relative;
+    font-size: 25px;
+    color: #ffffff;
+    transform: rotate(calc(-30deg * var(--a)));
+    display: inline-block;
+}
+
+.Circle
+{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.c1
+{
+    rotate: calc(var(--anglsec)*1deg);
+    z-index: 1;
+}
+
+.c2
+{
+    width: 160px;
+    height: 160px;
+    rotate: calc(var(--anglmin)*1deg);
+    z-index: 2;
+}
+
+.c3
+{
+    width: 130px;
+    height: 130px;
+    rotate: calc(var(--anglhour)*1deg);
+    z-index: 4;
+}
+
+.Circle i
+{
+    position: absolute;
+    background: var(--b);
+    height: 50%;
+    width: calc(19px - 9%);
+}
+
+.Time
+{
+    position: relative;
+    width: 5cm;
+    height: 1cm;
+    background: #848686;
+    border-radius: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 10px rgba(231, 231, 231, 0.6),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Time div
+{
+    position: relative;
+    font-size: 25px;
+    color: #848686;
+    text-shadow: 1px 1px 1px #d8d8d8,
+    -1px 1px 1px #d8d8d8,
+    1px -1px 1px #d8d8d8,
+    -1px -1px 1px #d8d8d8;
+}
+
+#hour
+{
+    right: 10px;
+}
+
+#col1
+{
+    right: 5px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#col2
+{
+    left: 5px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#sec
+{
+    left: 10px;
+}
